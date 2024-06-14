@@ -1,0 +1,27 @@
+:root {
+    --blue: rgb(25, 146, 212);
+    --gray: rgb(226, 232, 240);
+    --yellow: rgb(240, 180, 41);
+}
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas: 
+        'sidebar header'
+        'sidebar main-content'
+    ;
+}
+#sidebar {
+    background-color: var(--blue);
+    grid-area: sidebar;
+}
+#header {
+    grid-area: header;
+}
+#main-content {
+    background-color: var(--gray);
+    grid-area: main-content;
+}
