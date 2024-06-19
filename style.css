@@ -2,26 +2,341 @@
     --blue: rgb(25, 146, 212);
     --gray: rgb(226, 232, 240);
     --yellow: rgb(240, 180, 41);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
+
 #container {
     width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 5fr;
-    grid-template-areas: 
+    grid-template-areas:
         'sidebar header'
         'sidebar main-content'
     ;
 }
+
 #sidebar {
     background-color: var(--blue);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
     grid-area: sidebar;
+    display: grid;
+    padding: 8px;
+    gap: 8px;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 32px repeat(12, 1fr) 8fr;
+    grid-template-areas:
+        'Logo Logo-text'
+        '. .'
+        'Home Home-text'
+        'Profile Profile-text'
+        'Messages Messages-text'
+        'History History-text'
+        'Tasks Tasks-text'
+        'Communities Communities-text'
+        '. .'
+        '. .'
+        'Settings Settings-text'
+        'Support Support-text'
+        'Privacy Privacy-text'
+        '. .'
+    ;
 }
+
+#logo {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    grid-template-areas: 
+        'tl tr'
+        'tl br'
+        'bl br'
+    ;
+    align-self: center;
+    height: 32px;
+    width: 32px;
+    justify-self: self-end;
+}
+
+#logo > div {
+    background-color: white;
+}
+#l-tl {
+    grid-area: tl;
+}
+#l-tr {
+    grid-area: tr;
+}
+#l-bl {
+    grid-area: bl;
+}
+#l-br {
+    grid-area: br;
+}
+
+#logo-text {
+    align-self: center;
+    padding-bottom: 4px;
+}
+
+#sidebar > div {
+    align-self: center;
+}
+
+#sidebar > i {
+    align-self: center;
+    justify-self: self-end;
+    padding-right: 8px;
+}
+
 #header {
     grid-area: header;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 32px 4fr;
+    padding: 8px;
+    gap: 8px;
 }
+
+#search {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+#search > img {
+    height: 18px;
+}
+
+#searchbar {
+    flex: auto;
+    background-color: var(--gray);
+    border-radius: 50px;
+    height: 20px;
+}
+
+#top-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    gap: 8px;
+}
+
+#greeting {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        'image hi'
+        'image name'
+    ;
+    gap: 8px;
+    align-items: center;
+}
+
+#greet-img {
+    grid-area: image;
+}
+
+#header-buttons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    align-items: center;
+}
+
 #main-content {
     background-color: var(--gray);
     grid-area: main-content;
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        'projects announcements'
+        'projects trending'
+    ;
+    gap: 8px;
+    padding: 8px;
+}
+
+#projects {
+    grid-area: projects;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 28px 1fr 1fr 1fr;
+    gap: 8px;
+    font-size: 16px;
+}
+
+#project-header {
+    grid-column: 1 / 3;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+}
+
+#announcements {
+    grid-area: announcements;
+    display: grid;
+    grid-template-rows: 28px 1fr;
+    gap: 8px;
+}
+
+#announcement-card {
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+    gap: 8px;
+}
+
+#trending {
+    grid-area: trending;
+    display: grid;
+    grid-template-rows: 28px 1fr;
+    gap: 8px;
+}
+
+#trending-card {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 8px;
+    gap: 8px;
+}
+
+.grid-image-container {
+    width: 100%;
+    height: 100%;
+}
+
+/*.profile-picture {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid var(--yellow);
+    object-fit: contain;
+}*/
+
+.header-buttons {
+    background-color: var(--blue);
+    padding: 4px 8px;
+    color: white;
+    border: none;
+    width: 80px;
+    border-radius: 50px;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+h3 {
+    font-size: 16px;
+}
+
+h4 {
+    font-size: 14px;
+}
+
+h5 {
+    font-size: 12px;
+}
+
+p {
+    font-size: 12px;
+    color: var(--gray);
+}
+
+/* Sidebar grid placement */
+#Logo {
+    grid-area: Logo;
+}
+
+#Logo-text {
+    grid-area: Logo-text;
+}
+
+#Home {
+    grid-area: Home;
+}
+
+#Home-text {
+    grid-area: Home-text;
+}
+
+#Profile {
+    grid-area: Profile;
+}
+
+#Profile-text {
+    grid-area: Profile-text;
+}
+
+#Messages {
+    grid-area: Messages;
+}
+
+#Messages-text {
+    grid-area: Messages-text;
+}
+
+#History {
+    grid-area: History;
+}
+
+#History-text {
+    grid-area: History-text;
+}
+
+#Tasks {
+    grid-area: Tasks;
+}
+
+#Tasks-text {
+    grid-area: Tasks-text;
+}
+
+#Communities {
+    grid-area: Communities;
+}
+
+#Communities-text {
+    grid-area: Communities-text;
+}
+
+#Settings {
+    grid-area: Settings;
+}
+
+#Settings-text {
+    grid-area: Settings-text;
+}
+
+#Support {
+    grid-area: Support;
+}
+
+#Support-text {
+    grid-area: Support-text;
+}
+
+#Privacy {
+    grid-area: Privacy;
+}
+
+#Privacy-text {
+    grid-area: Privacy-text;
 }

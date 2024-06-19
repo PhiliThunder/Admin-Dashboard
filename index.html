@@ -6,12 +6,97 @@
     <title>Document</title>
     <link href="cssReset.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div id="container">
-        <div id="sidebar"></div>
-        <div id="header"></div>
-        <div id="main-content"></div>
+        <div id="sidebar">
+            <div id="logo">
+                <div id="l-tl"></div>
+                <div id="l-bl"></div>
+                <div id="l-tr"></div>
+                <div id="l-br"></div>
+            </div>
+            <h1 id="logo-text">Dashboard</h1>
+            <i id="Home" class="fas fa-home"></i>
+            <div id="Home-text">Home</div>
+            <i id="Profile" class="fas fa-user"></i>
+            <div id="Profile-text">Profile</div>
+            <i id="Messages" class="fas fa-envelope"></i>
+            <div id="Messages-text">Messages</div>
+            <i id="History" class="fas fa-history"></i>
+            <div id="History-text">History</div>
+            <i id="Tasks" class="fas fa-tasks"></i>
+            <div id="Tasks-text">Tasks</div>
+            <i id="Communities" class="fas fa-users"></i>
+            <div id="Communities-text">Communities</div>
+            <i id="Settings" class="fas fa-cog"></i>
+            <div id="Settings-text">Settings</div>
+            <i id="Support" class="fas fa-life-ring"></i>
+            <div id="Support-text">Support</div>
+            <i id="Privacy" class="fas fa-shield-alt"></i>
+            <div id="Privacy-text">Privacy</div>
+        </div>
+        <div id="header">
+            <div id="search">
+                <img src="Resources/magnify.svg">
+                <div id="searchbar"></div>
+            </div>
+            <div id="top-right">
+                <i id="notifications" class="fas fa-bell"></i>
+                <div class="grid-image-container" id="prof-img">
+                    <img class="profile-picture" src="" alt="Profile Picture">
+                </div>
+                <h3 id="username">Poppe Samuels</h3>
+            </div>
+            <div id="greeting">
+                <div class="grid-image-container" id="greet-img">
+                    <img src="" alt="Profile Picture" class="profile-picture">
+                </div>
+                <h4 id="hi">Hi there,</h4>
+                <h2 id="name">Poppe Samuels (@poppis)</h2>
+            </div>
+            <div id="header-buttons-container">
+                <button class="header-buttons">New</button>
+                <button class="header-buttons">Upload</button>
+                <button class="header-buttons">Share</button>
+            </div>
+        </div>
+        <div id="main-content">
+            <div id="projects">
+                <h3 id="project-header">Your Projects</h3>
+                <div class="card" id="project-card">
+                    
+                </div>
+                <div class="card" id="project-card">
+                    
+                </div>
+                <div class="card" id="project-card">
+
+                </div>
+                <div class="card" id="project-card">
+
+                </div>
+                <div class="card" id="project-card">
+
+                </div>
+                <div class="card" id="project-card">
+                    
+                </div>
+            </div>
+            <div id="announcements">
+                <h3>Announcements</h3>
+                <div class="card" id="announcement-card">
+
+                </div>
+            </div>
+            <div id="trending">
+                <h3>Trending</h3>
+                <div class="card" id="trending-card">
+
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
